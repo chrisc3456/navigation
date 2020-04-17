@@ -37,3 +37,11 @@ private fun onClickRed() {
     findNavController().navigate(action)
 }
 ```
+
+## Reading Argument Values
+```kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    val colour = DisplayFragmentArgs.fromBundle(arguments!!).colour
+    textViewArgValue.text = colour
+}
+```
